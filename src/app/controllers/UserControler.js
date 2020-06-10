@@ -62,7 +62,7 @@ class UserController {
 
     const { id, name, provider } = await user.update(req.body);
 
-    return res.json(id, name, email, provider);
+    return res.json({ id, name, email, provider });
   }
 }
 
