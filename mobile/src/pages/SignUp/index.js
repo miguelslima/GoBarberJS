@@ -1,11 +1,11 @@
-import React, {useRef, useState} from 'react';
-import {Image} from 'react-native';
-import {useDispatch, useSelector} from 'react-redux';
+import React, { useRef, useState } from 'react';
+import { Image } from 'react-native';
+import { useDispatch, useSelector } from 'react-redux';
 
 import logo from '../../assets/logo.png';
 
 import Background from '../../components/Background';
-import {signUpRequest} from '../../store/modules/auth/actions';
+import { signUpRequest } from '../../store/modules/auth/actions';
 
 import {
   Container,
@@ -16,7 +16,7 @@ import {
   SignLinkText,
 } from './styles';
 
-export default function SignUp({navigation}) {
+export default function SignUp({ navigation }) {
   const dispatch = useDispatch();
 
   const emailRef = useRef();
