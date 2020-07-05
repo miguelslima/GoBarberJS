@@ -2,9 +2,9 @@ import React, { useRef, useState, useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import Icon from 'react-native-vector-icons/MaterialIcons';
 
-import Background from '~/components/Background';
-import { signOut } from '~/store/modules/auth/actions';
-import { updateProfileRequest } from '~/store/modules/user/actions';
+import Background from '../../components/Background';
+import { signOut } from '../../store/modules/auth/actions';
+import { updateProfileRequest } from '../../store/modules/user/actions';
 
 import {
   Container,
@@ -78,7 +78,7 @@ export default function Profile() {
             placeholder="Digite seu e-mail"
             ref={emailRef}
             returnKeyType="next"
-            onSubmitEditing={() => oldPassword.current.focus()}
+            onSubmitEditing={() => oldPasswordRef.current.focus()}
             value={email}
             onChangeText={setEmail}
           />

@@ -26,7 +26,9 @@ export default function SignIn({ navigation }) {
   const loading = useSelector((state) => state.auth.loading);
 
   function handleSubmit() {
-    dispatch(signInRequest(email, password));
+    if (email && password) {
+      dispatch(signInRequest(email, password));
+    }
   }
 
   return (
@@ -40,7 +42,7 @@ export default function SignIn({ navigation }) {
             keyboardType="email-address"
             autoCorrect={false}
             autoCapitalize="none"
-            placeholder="Digite seu e-mail"
+            placeholder="Digite seu email"
             returnKeyType="next"
             onSubmitEditing={() => passwordRef.current.focus()}
             value={email}
@@ -50,7 +52,7 @@ export default function SignIn({ navigation }) {
           <FormInput
             icon="lock-outline"
             secureTextEntry
-            placeholder="Digite sua senha"
+            placeholder="Sua senha secreta"
             ref={passwordRef}
             returnKeyType="send"
             onSubmitEditing={handleSubmit}
@@ -62,7 +64,6 @@ export default function SignIn({ navigation }) {
             Acessar
           </SubmitButton>
         </Form>
-
         <SignLink onPress={() => navigation.navigate('SignUp')}>
           <SignLinkText>Criar conta gratuita</SignLinkText>
         </SignLink>

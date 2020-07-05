@@ -1,4 +1,3 @@
-/* eslint-disable react/prop-types */
 import React, { useMemo } from 'react';
 import { parseISO, formatRelative } from 'date-fns';
 import pt from 'date-fns/locale/pt';
@@ -21,8 +20,8 @@ export default function Appointment({ data, onCancel }) {
         <Avatar
           source={{
             uri: data.provider.avatar
-              ? data.provider.avatar.url
-              : `https://api.adorable.io/avatar/50/${data.provider.name}.png`,
+              ? `https://api.adorable.io/avatar/50/${data.provider.name}.png`
+              : data.provider.avatar.url,
           }}
         />
 
@@ -34,7 +33,7 @@ export default function Appointment({ data, onCancel }) {
 
       {data.cancelable && !data.canceled_at && (
         <TouchableOpacity onPress={onCancel}>
-          <Icon name="event-busy" size={20} color="#F64c75" />
+          <Icon name="event-busy" size={20} color="#f64c75" />
         </TouchableOpacity>
       )}
     </Container>

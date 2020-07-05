@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-
+import { useSelector } from 'react-redux';
 import Icon from 'react-native-vector-icons/MaterialIcons';
 
 import api from '../../services/api';
@@ -11,6 +11,8 @@ import { Container, Title, List } from './styles';
 
 export default function Dashboard() {
   const [appointments, setAppointments] = useState([]);
+
+  const name = useSelector((state) => state.user.profile.name);
 
   useEffect(() => {
     async function loadAppointments() {
@@ -41,7 +43,7 @@ export default function Dashboard() {
     <Background>
       <Container>
         <Title>Agendamentos</Title>
-
+        <Title>Seja bem vindo(a) {name} </Title>
         <List
           data={appointments}
           keyExtractor={(item) => String(item.id)}
