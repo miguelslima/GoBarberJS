@@ -1,5 +1,5 @@
 import styled from 'styled-components/native';
-import { RectButton } from 'react-native-gesture-handler';
+import { TouchableOpacity } from 'react-native';
 
 export const Container = styled.SafeAreaView`
   flex: 1;
@@ -13,7 +13,7 @@ export const ProvidersList = styled.FlatList.attrs({
   padding: 0 20px;
 `;
 
-export const Provider = styled(RectButton)`
+export const Provider = styled(TouchableOpacity)`
   background: #fff;
   border-radius: 4px;
   padding: 20px;

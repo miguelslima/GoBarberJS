@@ -12,10 +12,11 @@ export const DateButton = styled.TouchableOpacity`
   margin: 0 30px;
   flex-direction: row;
   align-items: center;
+  justify-content: center;
 `;
 
 export const DateText = styled.Text`
-  font-size: 14px;
+  font-size: 15px;
   color: #fff;
   margin-left: 15px;
 `;

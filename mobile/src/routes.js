@@ -50,11 +50,7 @@ export default (isSigned = false) =>
                 tabBarVisible: false,
                 tabBarLabel: 'Agendar',
                 tabBarIcon: (
-                  <Icon
-                    name="add-circle-outline"
-                    size={20}
-                    color="rgba(255, 255, 255, 0.6)"
-                  />
+                  <Icon name="add" size={20} color="rgba(255, 255, 255, 0.6)" />
                 ),
               },
             },

@@ -11,26 +11,26 @@ import Background from '../../../components/Background';
 import { Container, Avatar, Name, Time, SubmitButton } from './styles';
 
 export default function Confirm({ navigation }) {
-  // const provider = navigation.getParam('provider');
-  // const time = navigation.getParam('time');
+  const provider = navigation.getParam('provider');
+  const time = navigation.getParam('time');
 
-  // const dateFormatted = useMemo(
-  //   () => formatRelative(parseISO(time), new Date(), { locale: pt }),
-  //   [time]
-  // );
+  const dateFormatted = useMemo(
+    () => formatRelative(parseISO(time), new Date(), { locale: pt }),
+    [time]
+  );
 
-  // async function handleAddAppointment() {
-  //   await api.post('appointments', {
-  //     provider_id: provider.id,
-  //     date: time,
-  //   });
+  async function handleAddAppointment() {
+    await api.post('appointments', {
+      provider_id: provider.id,
+      date: time,
+    });
 
-  //   navigation.navigate('Dashboard');
-  // }
+    navigation.navigate('Dashboard');
+  }
 
   return (
     <Background>
-      {/* <Container>
+      <Container>
         <Avatar
           source={{
             uri: provider.avatar
@@ -45,7 +45,7 @@ export default function Confirm({ navigation }) {
         <SubmitButton onPress={handleAddAppointment}>
           Confirmar agendamento
         </SubmitButton>
-      </Container> */}
+      </Container>
     </Background>
   );
 }

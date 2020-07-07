@@ -12,7 +12,14 @@ export const Title = styled.TextInput`
   margin-top: 30px;
 `;
 
+export const TitleWelcome = styled.Text`
+  font-size: 15px;
+  color: #bbb;
+  align-self: center;
+  margin-top: 20px;
+`;
+
 export const List = styled.FlatList.attrs({
   showsVerticalScrollIndicator: false,
-  contentContainerStyle: { padding: 30 },
+  contentContainerStyle: { padding: 20 },
 })``;

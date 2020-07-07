@@ -57,7 +57,7 @@ SelectProvider.navigationOptions = ({ navigation }) => ({
         navigation.navigate('Dashboard');
       }}
     >
-      <Icon name="chevron-left" size={20} color="#FFF" />
+      <Icon name="chevron-left" size={25} color="#FFF" />
     </TouchableOpacity>
   ),
 });
